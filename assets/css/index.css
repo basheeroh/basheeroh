@@ -6,7 +6,6 @@
 body{
     position: relative;
     overflow-x: hidden;
-    z-index: 0;
 }
 body::after{
     background-image: url(‪C:/Users/USER/Desktop/web_dev/landingpage/bg-pattern-intro-left-desktop.svg);
@@ -57,11 +56,11 @@ li{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 100vw;
+    width: 87vw;
     background-color: #fff;
     height: 70px;
     padding: 0 7vw;
-    z-index: 2;
+    /* z-index: 2; */
 }
 .navlinks{
     color: hsl(273, 4%, 51%);
@@ -73,7 +72,9 @@ li{
     text-align: center;
     left: 0;
     transform: translateX(60%);
-
+}
+.navlinks li{
+    display: inline-block;
 }
 .mobile{
     background-color: transparent;
@@ -210,15 +211,25 @@ li{
 .resource a{
     font-weight: 500;
 }
-
-
-
-
-
-
-
-.navlinks{
-    color: 
-    
-    
+@media screen and (max-width: 800px){
+   h1{
+       font-size: 2.5rem;
+   } 
+   h2{
+       font-size: 1.5rem;
+   }
+   .headerImage{
+       width: 350px;
+       height: 700px;
+   }
 }
+@media screen and (max-width: 700px){
+    body::after{
+        background-image: url(C:\Users\USER\Desktop\web_dev\landingpage\assets\images\bg-pattern-intro-right-mobile.svg);
+        background-position: 100% 35%;
+    }
+    /* .mobile{
+        display: block;
+    } */
+}
+
